@@ -79,6 +79,9 @@ class PayrollSystem{
         }
         if(employeeToRemove != null){
             employeeList.remove(employeeToRemove);
+            System.out.println("Employee Removed Successfully where id "+id);
+        }else{
+            System.out.println("Unable to remove Employee | Emp Id not found");
         }
     }
 
@@ -96,8 +99,8 @@ public class Main {
         System.out.println("Employee Payroll System");
         PayrollSystem prSystem = new PayrollSystem();
         FullTimeEmployee emp1 = new FullTimeEmployee(1001,"Amit Singh","Marketing",38000);
-        FullTimeEmployee emp2 = new FullTimeEmployee(1002,"Raghav Singh","HR",8000);
-        PartTimeEmployee emp3 = new PartTimeEmployee(1002,"Raghav Singh","Development",40,800);
+        FullTimeEmployee emp2 = new FullTimeEmployee(1002,"Anjali Verma","HR",8000);
+        PartTimeEmployee emp3 = new PartTimeEmployee(1003,"Bhavesh","Development",40,800);
 
         prSystem.addEmployee(emp1);
         prSystem.addEmployee(emp2);
@@ -111,22 +114,3 @@ public class Main {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
